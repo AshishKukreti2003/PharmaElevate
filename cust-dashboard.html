@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>pharmaSYNC - Home</title>
+
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/cust-dashboard.css">
+</head>
+<body>
+<div class="background-overlay"></div>
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h2">
+        <header>
+          <h2 id="logo-pharma">pharma</h2>
+          <h2 id="logo-sync">SYNC</h2>
+        </header>
+    </span>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button class="btn btn-primary" role="button" onclick="location.href='pharm-dashboard.html'" id="pharmacy-button">Pharmacy</button>
+      <button class="btn btn-secondary" onclick="signOut()">Log out</button>
+    </div>
+</nav>
+
+<h1 class="page-header">Rx Lookup</h1>
+
+<!-- Drug Code search bar -->
+<div class="form">
+  <input id="din" class="form-control mr-sm-2" type="text" placeholder="Drug Code" aria-label="Search">
+  <button id="submit" class="btn btn-outline-success btn-rounded btn-sm my-0" onclick="populateTable()">GO</button>
+</div>
+
+<!-- Location & quantity table -->
+<div class="table-container">
+  <table id="cust-table" class="table table-responsive-sm table-bordered table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Quantity</th>
+      </tr>
+
+      <tr>
+        <td>Mumbai</td>
+        <td id="q_mum"></td>
+      </tr>
+      <tr>
+        <td>Delhi</td>
+        <td id="q_del"></td>
+      </tr>
+    </thead>
+  </table>
+</div>
+<div id="splitter">
+    <h3>Order Prescription</h3>
+</div>
+
+
+<form>
+  <div class="form-group">
+    <label for="cust-name">Full Name</label>
+    <input type="text" class="form-control" id="cust-name">
+  </div>
+
+  <div class="form-group">
+    <label for="cust-card">Aadhar Card Number</label>
+    <input type="text" class="form-control" id="cust-card">
+  </div>
+
+    <label for="insurance-select">Insurance Company</label>
+        <select class="form-control" id="insurance-select">
+            <option>LIC</option>
+            <option>ICICI Lombard</option>
+            <option>Star Health</option>
+            <option>New India Assurance</option>
+            <option>Others</option>
+        </select>
+
+
+    <div class="form-group">
+    <label for="policy-number">Policy Number</label>
+    <input type="text" class="form-control" id="policy-number">
+  </div>
+  <button type="submit" class="btn btn-primary btn-success" id="submit-button" onclick="formAlert()">SUBMIT</button>
+</form>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!-- Firebase -->
+<!-- update the version number as needed -->
+<script src="/__/firebase/7.8.1/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script src="/__/firebase/7.8.1/firebase-auth.js"></script>
+<script src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+<!-- initialize the SDK after all desired features are loaded -->
+<script src="/__/firebase/init.js"></script>
+<!-- Custom JavaScript -->
+<script src="script/script.js"></script>
+<script src="script/cust-dashboard.js"></script>
+</body>
+</html>
