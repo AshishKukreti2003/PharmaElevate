@@ -1,5 +1,5 @@
 header {
-    text-align: center;
+  text-align: center;
 }
 
 .page-header {
@@ -7,12 +7,13 @@ header {
   padding: 2vw;
 }
 
-#logo-pharma, #logo-sync {
-    display: inline;
+#logo-pharma,
+#logo-elevate {
+  display: inline;
 }
 
-#logo-sync {
-    color: #89CFF0;
+#logo-elevate {
+  color: #89cff0;
 }
 
 #navbar-logo {
@@ -23,6 +24,6 @@ header {
   margin-right: 1.15vw;
 }
 
-#customer-button, #pharmacy-button {
-  
+#customer-button,
+#pharmacy-button {
 }
