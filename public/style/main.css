@@ -1,0 +1,29 @@
+header {
+  text-align: center;
+}
+
+.page-header {
+  text-align: center;
+  padding: 2vw;
+}
+
+#logo-pharma,
+#logo-elevate {
+  display: inline;
+}
+
+#logo-elevate {
+  color: #89cff0;
+}
+
+#navbar-logo {
+  margin-left: 1.15vw;
+}
+
+#navbar-button {
+  margin-right: 1.15vw;
+}
+
+#customer-button,
+#pharmacy-button {
+}

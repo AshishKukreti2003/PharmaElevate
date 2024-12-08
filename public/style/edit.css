@@ -1,0 +1,19 @@
+form div, div.form {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+div.form {
+  width: 100%;
+}
+
+form {
+  width:50vw;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+label {
+  font-weight: bold;
+}
